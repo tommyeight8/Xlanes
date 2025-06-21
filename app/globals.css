@@ -18,6 +18,11 @@
     --foreground: #ededed;
   }
 }
+.font-neon-outline {
+  font-family: var(--font-neon-outline);
+}
+
+
 
 body {
   background: var(--background);
