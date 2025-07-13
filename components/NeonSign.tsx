@@ -1,94 +1,69 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import { Edu_SA_Beginner } from 'next/font/google';
+import { useEffect, useRef, useState } from "react";
+import { Quicksand } from "next/font/google";
 
-const eduSa = Edu_SA_Beginner({
-  subsets: ['latin'],
-  weight: '400',
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: "700",
 });
 
 type NeonSignProps = {
   text: string;
-  delayMs?: number;
 };
 
-export default function NeonSign({ text, delayMs = 400 }: NeonSignProps) {
-  const signRef = useRef<HTMLHeadingElement | null>(null);
-  const [isFlickering, setIsFlickering] = useState(false);
-  const [shouldGlow, setShouldGlow] = useState(false);
+export default function NeonSign({ text }: NeonSignProps) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.intersectionRatio >= 0.5) {
-          setTimeout(() => {
-            setIsFlickering(true);
-            setTimeout(() => {
-              setIsFlickering(false);
-              setShouldGlow(true);
-            }, 200); // fast flicker for 1.5s then glow
-          }, delayMs);
-        }
+        if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.5 }
+      { threshold: 0.7 }
     );
 
-    const current = signRef.current;
+    const current = containerRef.current;
     if (current) observer.observe(current);
 
     return () => {
       if (current) observer.unobserve(current);
     };
-  }, [delayMs]);
-
-  const glowClass = isFlickering
-    ? 'neon-flicker-fast'
-    : shouldGlow
-    ? 'neon-glow'
-    : '';
-
+  }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black">
-<h1
-  ref={signRef}
-  className={`text-[64px] text-white transition-all duration-1000 ease-out ${glowClass}`}
->
-  {text}
-</h1>
+    <div
+      ref={containerRef}
+      className="relative flex items-center justify-center h-[200px]" // optional height to help test scroll
+    >
+      <h1
+        className={`text-[64px] text-white transition-all duration-700 z-10 ${
+          isVisible ? "neon-glow" : ""
+        } ${quicksand.className}`}
+      >
+        {text}
+      </h1>
+
+      <div className="absolute flex justify-center items-center w-full h-28 m-auto">
+        <div
+          className={`w-[30%] h-12 rounded-full blur-2xl transition-all duration-700 ${
+            isVisible
+              ? "glow-fade-in bg-gradient-to-l from-[#ff00ff] to-[#ff00ff]"
+              : "opacity-0"
+          }`}
+        />
+      </div>
 
       <style jsx>{`
- .neon-glow {
-  text-shadow:
-    0 0 4px #ffffff,
-    0 0 10px #ffffff,
-    0 0 20px #ff00ff,
-    0 0 30px #ff00ff,
-    0 0 40px #ff00ff;
-  animation: smooth-flicker 3s infinite ease-in-out;
-}
+        .neon-glow {
+          text-shadow: 2px 2px 0 #f481bf, 4px 4px 0 #ff00ff, 0 0 6px #f75a8e,
+            0 0 40px #ff00ff, 0 0 32px #ff00ff;
+        }
 
-.neon-flicker-fast {
-  text-shadow:
-    0 0 2px #ffffff,
-    0 0 6px #ff00ff,
-    0 0 10px #ff00ff;
-  animation: quick-flicker 0.15s infinite;
-}
-
-@keyframes quick-flicker {
-  0%, 100% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0.3;
-  }
-  60% {
-    opacity: 0.7;
-  }
-}
-
+        .glow-fade-in {
+          opacity: 0.8;
+        }
       `}</style>
     </div>
   );

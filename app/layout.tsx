@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Orbitron } from 'next/font/google';
+import { Orbitron } from "next/font/google";
+import Navbar from "@/components/Navbar";
 
 const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['500'], // or 700 for thicker
-  variable: '--font-neon-outline',
+  subsets: ["latin"],
+  weight: ["500"], // or 700 for thicker
+  variable: "--font-neon-outline",
 });
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +19,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,13 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-<body
-  className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased`}
->
-
-
-
-
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased bg-[#0a0a0a]`}
+      >
+        <Navbar />
         {children}
       </body>
     </html>
