@@ -8,7 +8,11 @@ import VIP from "@/components/VIP";
 import { IconDownload } from "@tabler/icons-react";
 import { Arcade } from "@/components/Arcade";
 import Billiards from "@/components/Billiards";
+
 import { NeonButton } from "@/components/NeonButton";
+import Bowling from "@/components/Bowling";
+import BowlingTabs from "@/components/BowlingTabs";
+import Karaoke from "@/components/Karaoke";
 
 export default function Home() {
   return (
@@ -21,8 +25,11 @@ export default function Home() {
       <Hero />
       <div className="p-4 md:p-8 flex flex-col gap-4">
         <NeonSign text="BOWLING" />
-        <div className="w-full h-auto max-w-[1100px] m-auto flex gap-24 py-12">
-          <div className="w-1/2 flex flex-col gap-8">
+        <div
+          id="bowling"
+          className="w-full h-auto max-w-[1100px] m-auto flex flex-col md:flex-row gap-12 md:gap-18 lg:gap-24 md:py-10 lg:py-12"
+        >
+          <div className="w-full md:w-1/2 flex flex-col gap-8">
             <h3 className="text-4xl font-bold uppercase text-gray-200">
               Reserve A Lane Online
             </h3>
@@ -42,7 +49,7 @@ export default function Home() {
               Reserve Now
             </Link>
           </div>
-          <div className="w-1/2 h-96 relative rounded-2xl overflow-hidden">
+          <div className="w-full md:w-1/2 h-96 relative rounded-2xl overflow-hidden">
             <Image
               src="/images/bowling-group.jpg"
               alt="group image"
@@ -51,65 +58,26 @@ export default function Home() {
             />
           </div>
         </div>
-        <div
-          className="flex relative h-72 w-full max-w-[1100px] m-auto rounded-2xl overflow-hidden 
-        bg-gradient-to-tl from-violet-600 to-pink-600"
-        >
-          {/* Text block on the left */}
-          <div className="flex-1 flex items-center pl-10">
-            <div className="text-left max-w-md">
-              <p className="font-light text-gray-50 text-3xl uppercase">
-                Book Your
-              </p>
-              <h3 className="text-5xl font-semibold text-gray-50 uppercase">
-                VIP ROOM
-              </h3>
-              <p className="mt-4 text-gray-200">
-                VIP rooms are secluded from the rest of the lanes. Food &
-                Beverage minimums are only applied to Friday & Saturday
-                reservations.
-              </p>
-            </div>
-          </div>
 
-          {/* Image on the right */}
-          <div className="w-[600px] h-full relative">
-            <Image
-              src="/images/mulholland.png"
-              alt="mulholland vip"
-              fill
-              className="object-cover object-right z-0"
-            />
-          </div>
-        </div>
-        <div className="w-full max-w-[1100px] m-auto py-6 flex flex-col gap-12 items-center">
-          <VIP />
-          <button
-            className="capitalize text-xl border border-pink-600 text-pink-600 px-6 py-2 
-          rounded-4xl hover:text-gray-100 hover:bg-pink-600 transition duration-200 cursor-pointer
-          flex items-center gap-2"
-          >
-            Download our event information proposal <IconDownload />
-          </button>
-
-          {/* <NeonButton text={`Download our event information proposal`} /> */}
-        </div>
+        <BowlingTabs />
       </div>
-      <div className="relative py-4 md:py-8 overflow-hidden">
+      <div id="arcade" className="relative px-4 md:px-8 overflow-hidden">
         <NeonSign text="Arcade" />
         <div className="w-full h-auto max-w-[1100px] m-auto my-12">
           <Arcade />
         </div>
       </div>
-      <div className="py-4 md:py-8">
+      <div id="billiards" className="px-4 md:px-8">
         <NeonSign text="BILLIARDS" />
-
         <div className="w-full h-auto max-w-[1100px] m-auto my-12">
           <Billiards />
         </div>
       </div>
-      <div className="py-4 md:py-8">
-        <NeonSign text="PARTY" />
+      <div id="karaoke" className="px-4 md:px-8">
+        <NeonSign text="Karaoke" />
+        <div className="w-full h-auto max-w-[1100px] m-auto my-12">
+          <Karaoke />
+        </div>
       </div>
     </>
   );

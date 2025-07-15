@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="bg-[#101010] flex flex-col justify-between sticky top-0 z-[9999]">
       {/* Top Row */}
-      <div className="w-full flex items-center justify-between px-4 py-1 border-b border-zinc-800 gap-4">
+      <div className="w-full m-auto flex items-center justify-between py-1 px-21 gap-4">
         {/* Logo */}
         <Image
           src="/images/neon-logo-sm.png"
@@ -19,7 +19,7 @@ const Navbar = () => {
 
         {/* Marquee */}
         <div className="flex-1 mx-4 overflow-hidden">
-          <div className="font-thin text-4xl text-zinc-800 h-[48px]">
+          <div className="font-thin text-4xl text-zinc-600 h-[48px]">
             <Marquee
               speed={50}
               gradient={false}
@@ -66,17 +66,58 @@ const Navbar = () => {
       </div>
 
       {/* Bottom Nav Menu */}
-      <div className="w-full p-2 flex justify-center bg-[#1a1a1a]">
-        <ul className="font-semibold text-sm flex items-center gap-8 text-gray-300 tracking-wide">
+      <div className="w-full p-3 flex justify-center bg-[#1a1a1a] border-t border-b border-zinc-800">
+        <ul className="text-sm flex items-center gap-8 text-gray-300 tracking-wide">
           <li className="transition duration-200 hover:text-white cursor-pointer uppercase">
             Home
           </li>
-          <li className="transition duration-200 hover:text-white cursor-pointer uppercase">
-            Book an Event
+          <li>
+            <a
+              href="/#bowling"
+              className="transition duration-200 hover:text-white cursor-pointer uppercase"
+            >
+              Bowling
+            </a>
           </li>
-          <li className="transition duration-200 hover:text-white cursor-pointer uppercase">
-            Food
+          <li>
+            <a
+              href="/#arcade"
+              className="transition duration-200 hover:text-white cursor-pointer uppercase"
+            >
+              Arcade
+            </a>
           </li>
+          <li>
+            <a
+              href="/#billiards"
+              className="transition duration-200 hover:text-white cursor-pointer uppercase"
+            >
+              Billiards
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#karaoke"
+              className="transition duration-200 hover:text-white cursor-pointer uppercase"
+            >
+              Karaoke
+            </a>
+          </li>
+          <Link href={"/food"}>
+            <li className="transition duration-200 hover:text-white cursor-pointer uppercase">
+              Food
+            </li>
+          </Link>
+          <Link href={"/drinks"}>
+            <li className="transition duration-200 hover:text-white cursor-pointer uppercase">
+              Drinks
+            </li>
+          </Link>
+          <Link href="/events">
+            <li className="transition duration-200 hover:text-white cursor-pointer uppercase">
+              Book an Event
+            </li>
+          </Link>
           <li className="transition duration-200 hover:text-white cursor-pointer uppercase">
             Contact Us
           </li>

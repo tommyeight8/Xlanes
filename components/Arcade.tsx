@@ -69,10 +69,10 @@ export function Arcade() {
     <div>
       <BackgroundGradient
         className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900 
-      flex gap-8"
+      flex flex-col md:flex-row gap-6"
       >
-        <div className="w-1/3">
-          <p className="uppercase text-2xl font-semibold mt-4 mb-2 dark:text-neutral-200">
+        <div className="w-full md:w-1/3">
+          <p className="uppercase text-2xl font-semibold mb-2 text-zinc-700">
             Get Ready, Go!
           </p>
 
@@ -86,22 +86,22 @@ export function Arcade() {
               $1
             </span>
           </button>
-          <div className="text-gray-600 w-full max-w-[220px] p-3 rounded-2xl bg-gray-100 mt-4 flex flex-col gap-2">
-            <p className="flex justify-between p-1 px-2 bg-gray-200 rounded-md">
+          <div className="text-gray-600 w-full p-3 rounded-2xl bg-gray-200 mt-4 flex flex-col gap-2">
+            <p className="flex justify-between p-1 px-2 bg-gray-300 rounded-md">
               <span>25 Credits</span>
               <span className="font-semibold">$5</span>
             </p>
-            <p className="flex justify-between p-1 px-2 bg-gray-200 rounded-md">
+            <p className="flex justify-between p-1 px-2 bg-gray-300 rounded-md">
               <span>50 Credits</span>
               <span className="font-semibold">$10</span>
             </p>
-            <p className="flex justify-between p-1 px-2 bg-gray-200 rounded-md">
+            <p className="flex justify-between p-1 px-2 bg-gray-300 rounded-md">
               <span>100 Credits</span>
               <span className="font-semibold">$20</span>
             </p>
           </div>
         </div>
-        <div className="w-2/3">
+        <div className="w-full md:w-2/3">
           <ImageCarousel />
         </div>
       </BackgroundGradient>

@@ -32,7 +32,7 @@ const VIP = () => {
 
       {/* Brentwood Room */}
       <div className="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col justify-between">
-        <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-6">
+        <div className="bg-gradient-to-br from-purple-600 to-blue-600 p-6">
           <h3 className="text-2xl font-bold text-white mb-2">Brentwood Room</h3>
         </div>
         <div className="p-6">
@@ -59,7 +59,7 @@ const VIP = () => {
 
       {/* Mulholland Room */}
       <div className="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col justify-between">
-        <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-6">
+        <div className="bg-gradient-to-br from-purple-600 to-blue-800 p-6">
           <h3 className="text-2xl font-bold text-white mb-2">
             Mulholland Room
           </h3>

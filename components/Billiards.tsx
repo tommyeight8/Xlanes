@@ -67,19 +67,19 @@ const ImageCarousel = () => {
   );
 };
 
-export default function CueStickImage() {
+export default function Billiards() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <div>
       <BackgroundGradient
-        className="rounded-[22px] p-4 sm:p-10 bg-zinc-900 dark:bg-zinc-900 
-          flex gap-8"
+        className="rounded-[22px] p-4 sm:p-10 bg-[#101010] dark:bg-zinc-900 
+          flex flex-col md:flex-row gap-6"
       >
-        <div className="w-1/3">
-          <p className="uppercase text-2xl font-semibold mt-4 mb-2 text-gray-200">
-            Billiards Table
+        <div className="w-full md:w-1/3">
+          <p className="uppercase text-2xl font-semibold mb-2 text-gray-200">
+            cue up!
           </p>
 
           <p className="text-sm text-gray-300 dark:text-neutral-400">
@@ -87,24 +87,24 @@ export default function CueStickImage() {
             and accuracy, ensuring you can execute every shot perfectly.
           </p>
 
-          <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-gradient-to-l bg-violet-500 to-pink-500 mt-4 text-xs font-bold">
+          <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-gradient-to-l bg-violet-600 to-pink-600 mt-4 text-xs font-bold">
             <span className="capitalize">4 People per table</span>
-            <span className="bg-violet-600 rounded-full text-xs h-6 w-6 flex justify-center items-center text-white">
+            <span className="bg-violet-500 rounded-full text-xs h-6 w-6 flex justify-center items-center text-white">
               <PiUsersBold />
             </span>
           </button>
-          <div className="text-gray-600 w-full max-w-[220px] p-3 rounded-2xl bg-gray-100/20 mt-4 flex flex-col gap-2">
-            <p className="flex justify-between p-1 px-2 bg-gray-200 rounded-md">
+          <div className="text-gray-200 w-full p-3 rounded-2xl bg-gray-600/20 mt-4 flex flex-col gap-2">
+            <p className="flex justify-between p-1 px-2 bg-gray-700 rounded-md">
               <span>Mon - Thu</span>
               <span className="font-semibold">$20/hr</span>
             </p>
-            <p className="flex justify-between p-1 px-2 bg-gray-200 rounded-md">
+            <p className="flex justify-between p-1 px-2 bg-gray-700 rounded-md">
               <span>Fri - Sun</span>
               <span className="font-semibold">$25/hr</span>
             </p>
           </div>
         </div>
-        <div className="w-2/3">
+        <div className="w-full md:w-2/3">
           <ImageCarousel />
         </div>
       </BackgroundGradient>

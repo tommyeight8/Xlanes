@@ -35,10 +35,10 @@ export default function NeonSign({ text }: NeonSignProps) {
   return (
     <div
       ref={containerRef}
-      className="relative flex items-center justify-center h-[200px]" // optional height to help test scroll
+      className="relative flex items-center justify-center h-[150px] md:h-[200px]" // optional height to help test scroll
     >
       <h1
-        className={`text-[64px] text-white transition-all duration-700 z-10 ${
+        className={`text-5xl md:text-[64px] text-white transition-all duration-700 z-10 ${
           isVisible ? "neon-glow" : ""
         } ${quicksand.className}`}
       >
@@ -47,7 +47,7 @@ export default function NeonSign({ text }: NeonSignProps) {
 
       <div className="absolute flex justify-center items-center w-full h-28 m-auto">
         <div
-          className={`w-[30%] h-12 rounded-full blur-2xl transition-all duration-700 ${
+          className={`w-[30%] h-10 md:h-12 rounded-full blur-2xl transition-all duration-700 ${
             isVisible
               ? "glow-fade-in bg-gradient-to-l from-[#ff00ff] to-[#ff00ff]"
               : "opacity-0"
