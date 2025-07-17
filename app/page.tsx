@@ -13,6 +13,7 @@ import { NeonButton } from "@/components/NeonButton";
 import Bowling from "@/components/Bowling";
 import BowlingTabs from "@/components/BowlingTabs";
 import Karaoke from "@/components/Karaoke";
+import DrivingLocation from "@/components/DrivingLocation";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
       />
       <Hero />
       <div className="p-4 md:p-8 flex flex-col gap-4">
-        <NeonSign text="BOWLING" />
+        <NeonSign text="Bowling" />
         <div
           id="bowling"
           className="w-full h-auto max-w-[1100px] m-auto flex flex-col md:flex-row gap-12 md:gap-18 lg:gap-24 md:py-10 lg:py-12"
@@ -41,13 +42,21 @@ export default function Home() {
               (Dressy hats are allowed) | No Visors | No Beanies | No Baggy
               Pants.
             </p>
-            <Link
+            <a
+              href="https://alleytrak.com/app/client/4425"
+              target="_blank"
+              className="text-lg bg-pink-600 hover:bg-pink-700 transition duration-200 
+              text-white px-6 py-2 rounded-4xl w-fit"
+            >
+              Reserve Now
+            </a>
+            {/* <Link
               href={"/"}
               className="text-lg bg-pink-600 hover:bg-pink-700 transition duration-200 
               text-white px-6 py-2 rounded-4xl w-fit"
             >
               Reserve Now
-            </Link>
+            </Link> */}
           </div>
           <div className="w-full md:w-1/2 h-96 relative rounded-2xl overflow-hidden">
             <Image
@@ -61,22 +70,27 @@ export default function Home() {
 
         <BowlingTabs />
       </div>
-      <div id="arcade" className="relative px-4 md:px-8 overflow-hidden">
+      <div id="arcade" className="scroll-mt-[100px] px-4 md:px-8">
         <NeonSign text="Arcade" />
         <div className="w-full h-auto max-w-[1100px] m-auto my-12">
           <Arcade />
         </div>
       </div>
-      <div id="billiards" className="px-4 md:px-8">
-        <NeonSign text="BILLIARDS" />
+      <div id="billiards" className="scroll-mt-[100px] px-4 md:px-8">
+        <NeonSign text="Billiards" />
         <div className="w-full h-auto max-w-[1100px] m-auto my-12">
           <Billiards />
         </div>
       </div>
-      <div id="karaoke" className="px-4 md:px-8">
+      <div id="karaoke" className="scroll-mt-[100px] px-4 md:px-8">
         <NeonSign text="Karaoke" />
         <div className="w-full h-auto max-w-[1100px] m-auto my-12">
           <Karaoke />
+        </div>
+      </div>
+      <div className="px-4 md:px-8">
+        <div className="w-full h-auto max-w-[1100px] m-auto my-24">
+          <DrivingLocation />
         </div>
       </div>
     </>

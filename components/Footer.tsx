@@ -41,7 +41,7 @@ function AnimatedBanner() {
       ref={ref}
       initial={{ y: 50, opacity: 0 }}
       animate={controls}
-      className="absolute left-1/2 -translate-x-1/2 top-4 md:top-1 text-center rounded-4xl flex items-center leading-none gap-2 justify-center 
+      className="absolute left-1/2 -translate-x-1/2 top-4 md:top-8 text-center rounded-4xl flex items-center leading-none gap-2 justify-center 
        w-[90%] sm:w-auto p-1 md:p-2 bg-gradient-to-l from-pink-600 to-violet-600 text-white border-2 border-pink-600"
     >
       <span
@@ -61,9 +61,9 @@ function AnimatedBanner() {
 
 const Footer = () => {
   return (
-    <div className="w-full h-auto p-8 m-auto relative">
+    <div className="w-full h-auto pt-16 p-8 m-auto relative">
       <AnimatedBanner />
-      <div className="flex flex-col justify-between lg:flex-row gap-8 text-gray-300 py-18 border-zinc-900 border-t">
+      <div className="flex flex-col justify-between lg:flex-row gap-8 text-gray-300 py-18 border-zinc-900 border-0 md:border-t">
         <div className="flex flex-col md:flex-row items-center lg:items-start gap-6 lg:gap-0 lg:flex-col w-full lg:w-[30%] text-sm">
           <div className="relative w-28 h-28 flex shrink-0">
             <Image
@@ -94,12 +94,16 @@ const Footer = () => {
               <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
                 Home
               </li>
-              <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
-                About
-              </li>
-              <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
-                FAQ
-              </li>
+              <Link href="/about">
+                <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
+                  About
+                </li>
+              </Link>
+              <Link href="/faq">
+                <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
+                  FAQ
+                </li>
+              </Link>
               <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
                 Bowling Rates
               </li>
@@ -108,9 +112,11 @@ const Footer = () => {
           <div className="flex flex-col gap-4 text-sm">
             <h3 className="text-pink-600">Quick Links</h3>
             <ul className="flex flex-col gap-3">
-              <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
-                Sports Bar
-              </li>
+              <Link href="/sports-bar">
+                <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
+                  Sports Bar
+                </li>
+              </Link>
               <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
                 Bowling
               </li>
@@ -122,20 +128,20 @@ const Footer = () => {
           <div className="flex flex-col gap-4 text-sm">
             <h3 className="text-pink-600">Business Hours</h3>
             <ul className="flex flex-col gap-3">
-              <li className="text-gray-400 hover:text-gray-50 transition duration-200 cursor-pointer">
+              <li className="text-gray-400">
                 <span className="font-semibold text-gray-50">Mon - Thu</span>
                 {"  "}
                 5:00 PM - 11:30 PM
               </li>
-              <li className="text-gray-400 hover:text-gray-50 transition duration-200 cursor-pointer">
+              <li className="text-gray-400">
                 <span className="font-semibold text-gray-50">Fri</span>
                 {"  "} 5:00 PM - 2:00 AM
               </li>
-              <li className="text-gray-400 hover:text-gray-50 transition duration-200 cursor-pointer">
+              <li className="text-gray-400">
                 <span className="font-semibold text-gray-50">Sat</span>
                 {"  "} 11:30 AM - 2:00 AM
               </li>
-              <li className="text-gray-400 hover:text-gray-50 transition duration-200 cursor-pointer">
+              <li className="text-gray-400">
                 <span className="font-semibold text-gray-50">Sun</span>
                 {"  "} 11:30 AM - 11:30 PM
               </li>
@@ -145,7 +151,7 @@ const Footer = () => {
             <h3 className="text-pink-600">Information</h3>
             <ul className="flex flex-col gap-3">
               <li
-                className="text-gray-200 hover:text-gray-100 transition duration-200 cursor-pointer flex
+                className="text-gray-200 flex
               items-center gap-2
             "
               >
@@ -156,21 +162,21 @@ const Footer = () => {
                 333 S. Alameda St #300 Los Angeles, CA 90013
               </li>
               <li
-                className="text-gray-200 hover:text-gray-100 transition duration-200 cursor-pointer flex
+                className="text-gray-200 flex
               items-center gap-2"
               >
                 <IconMail size={18} className="text-pink-600" />
                 Info@XLanesLA.com
               </li>
               <li
-                className="text-gray-200 hover:text-gray-100 transition duration-200 cursor-pointer flex
+                className="text-gray-200 flex
               items-center gap-2"
               >
                 <IconMail size={18} className="text-pink-600" />
                 Events@XLanesLA.com
               </li>{" "}
               <li
-                className="text-gray-200 hover:text-gray-100 transition duration-200 cursor-pointer flex
+                className="text-gray-200 flex
               items-center gap-2"
               >
                 <IconPhone size={18} className="text-pink-600" />

@@ -37,10 +37,10 @@ const DrinkMenu = () => {
                 className="p-4 rounded-xl bg-gray-800/20 border border-gray-800"
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="font-bold text-lg text-violet-500">
+                  <h3 className="font-bold text-lg text-violet-600">
                     {section.category}
                   </h3>
-                  <span className="font-semibold bg-violet-500 text-gray-200 px-3 py-1 rounded-full text-sm">
+                  <span className="font-semibold bg-violet-600 text-gray-200 px-3 py-1 rounded-full text-sm">
                     {section.price}
                   </span>
                 </div>
@@ -61,7 +61,7 @@ const DrinkMenu = () => {
                 key={cocktail.name}
                 className="p-4 rounded-xl bg-gray-800/20 border border-gray-800"
               >
-                <h3 className="text-violet-500 font-semibold">
+                <h3 className="text-violet-600 font-semibold">
                   {cocktail.name}
                 </h3>
                 <p className="text-gray-200 text-sm">{cocktail.description}</p>
@@ -77,7 +77,7 @@ const DrinkMenu = () => {
                 key={shooter.name}
                 className="p-4 rounded-xl bg-gray-800/20 border border-gray-800"
               >
-                <h3 className="text-violet-500 font-semibold">
+                <h3 className="text-violet-600 font-semibold">
                   {shooter.name}
                 </h3>
                 <p className="text-gray-200 text-sm">{shooter.description}</p>
@@ -115,7 +115,7 @@ const DrinkMenu = () => {
                 key={wine.name}
                 className="p-4 rounded-xl bg-gray-800/20 border border-gray-800"
               >
-                <h3 className="text-violet-500 font-bold">{wine.name}</h3>
+                <h3 className="text-violet-600 font-bold">{wine.name}</h3>
                 <p className="text-gray-200 text-sm">
                   {wine.options.join(", ")}
                 </p>
@@ -131,7 +131,7 @@ const DrinkMenu = () => {
                 key={section.category}
                 className="flex flex-col h-full p-4 rounded-xl bg-gray-800/20 border border-gray-800"
               >
-                <h3 className="text-violet-500 font-bold mb-2">
+                <h3 className="text-violet-600 font-bold mb-2">
                   {section.category}
                 </h3>
                 <ul className="text-gray-200 text-sm space-y-1">
@@ -152,7 +152,7 @@ const DrinkMenu = () => {
                 key={spirit.name}
                 className="p-4 rounded-xl bg-gray-800/20 border border-gray-800"
               >
-                <h3 className="text-violet-500 font-semibold">{spirit.name}</h3>
+                <h3 className="text-violet-600 font-semibold">{spirit.name}</h3>
                 <p className="text-gray-300 text-sm">{spirit.type}</p>
               </div>
             ))}

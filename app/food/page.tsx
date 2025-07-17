@@ -9,11 +9,11 @@ const page = () => {
       <div className="w-full max-w-[1100px]">
         <div
           className="flex relative h-48 md:h-64 lg:h-72 w-full rounded-2xl overflow-hidden 
-        bg-gradient-to-br from-red-500 to-pink-600"
+        bg-gradient-to-br from-red-500 to-rose-600"
         >
           <div
             className="md:w-1/2 absolute bottom-2 z-10 md:relative flex-1 flex items-center pl-4 lg:pl-10
-          bg-gradient-to-br from-red-500/80 to-pink-600/80 md:bg-transparent py-2 px-4"
+          bg-gradient-to-br from-red-500/80 to-rose-600/80 md:bg-transparent py-2 px-4"
           >
             <div className="text-left max-w-xl lg:max-w-md">
               <p className="font-light text-gray-50 text-md md:text-xl lg:text-3xl uppercase">

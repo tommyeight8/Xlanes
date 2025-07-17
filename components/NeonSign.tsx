@@ -1,11 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Quicksand } from "next/font/google";
+import { Quicksand, Neonderthaw, Audiowide } from "next/font/google";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
   weight: "700",
+});
+
+const neonderthaw = Neonderthaw({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const audioWide = Audiowide({
+  weight: "400",
 });
 
 type NeonSignProps = {
@@ -40,7 +49,7 @@ export default function NeonSign({ text }: NeonSignProps) {
       <h1
         className={`text-5xl md:text-[64px] text-white transition-all duration-700 z-10 ${
           isVisible ? "neon-glow" : ""
-        } ${quicksand.className}`}
+        } ${audioWide.className}`}
       >
         {text}
       </h1>
@@ -57,7 +66,7 @@ export default function NeonSign({ text }: NeonSignProps) {
 
       <style jsx>{`
         .neon-glow {
-          text-shadow: 2px 2px 0 #f481bf, 4px 4px 0 #ff00ff, 0 0 6px #f75a8e,
+          text-shadow: 1px 1px 0 #f481bf, 3px 3px 0 #ff00ff, 0 0 6px #f75a8e,
             0 0 40px #ff00ff, 0 0 32px #ff00ff;
         }
 

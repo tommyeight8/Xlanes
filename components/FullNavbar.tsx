@@ -6,12 +6,17 @@ import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Menu, X } from "lucide-react"; // or any other icon library you prefer
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  RiFacebookFill,
+  RiInstagramFill,
+  RiTwitterXFill,
+} from "react-icons/ri";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-black flex flex-col justify-between sticky top-0 z-[9999]">
+    <div className="bg-black flex flex-col justify-between sticky top-0 z-[9999] border-b border-gray-800">
       {/* Top Row */}
       <div className="w-full m-auto flex items-center justify-between py-1 px-4 sm:px-8 gap-4">
         {/* Logo */}
@@ -63,23 +68,27 @@ const Navbar = () => {
 
         {/* Reservation Buttons */}
         <div className="hidden lg:flex items-center gap-2 shrink-0">
-          <Link
-            href={"/"}
+          <a
+            href="https://alleytrak.com/app/client/4425"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-xs bg-pink-600 hover:bg-pink-700 transition duration-200 text-white px-4 py-2 rounded-4xl"
           >
             Bowling Reservation
-          </Link>
-          <Link
-            href={"/"}
+          </a>
+          <a
+            href="https://alleytrak.com/app/client/4425"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-xs bg-pink-600 hover:bg-pink-700 transition duration-200 text-white px-4 py-2 rounded-4xl"
           >
             Karaoke Reservation
-          </Link>
+          </a>
         </div>
       </div>
 
       {/* Bottom Nav Menu (Desktop Only) */}
-      <div className="w-full p-3 justify-center bg-[#0f0f0f] border-t border-b border-gray-800 hidden lg:flex">
+      <div className="w-full p-3 justify-center bg-[#0f0f0f] border-t  border-gray-800 hidden lg:flex">
         <ul className="text-sm flex items-center gap-8 text-gray-300 tracking-wide">
           {[
             ["Home", "/"],
@@ -113,12 +122,30 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 bg-[#101010] z-[9999] flex flex-col items-center justify-center text-white text-lg gap-6 lg:hidden"
+            className="fixed inset-0 bg-[#101010] z-[9999] flex flex-col items-center justify-center text-white text-lg gap-2 lg:hidden"
           >
+            <div className="absolute top-4 left-4 flex items-center gap-2 shrink-0">
+              <a
+                href="https://alleytrak.com/app/client/4425"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs bg-pink-600 hover:bg-pink-700 transition duration-200 text-white px-4 py-2 rounded-4xl"
+              >
+                Bowling Reservation
+              </a>
+              <a
+                href="https://alleytrak.com/app/client/4425"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs bg-pink-600 hover:bg-pink-700 transition duration-200 text-white px-4 py-2 rounded-4xl"
+              >
+                Karaoke Reservation
+              </a>
+            </div>
             {/* Close Button */}
             <button
               onClick={() => setMenuOpen(false)}
-              className="absolute top-4 right-4 text-white"
+              className="absolute top-4 right-4 text-pink-600 cursor-pointer"
             >
               <X size={32} />
             </button>
@@ -138,12 +165,35 @@ const Navbar = () => {
               <Link
                 key={i}
                 href={href}
-                className="uppercase text-gray-300 hover:text-white text-2xl"
+                className="uppercase text-gray-300 hover:text-[#101010] text-lg md:text-2xl px-4 py-2 hover:bg-pink-600 transition duration-200"
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
               </Link>
             ))}
+            <div className="flex gap-4 text-zinc-400 mt-2">
+              <Link
+                href=""
+                className="h-10 w-10 rounded-full flex justify-center items-center 
+                hover:bg-gray-50 hover:text-zinc-900 transition duration-200 cursor-pointer"
+              >
+                <RiTwitterXFill size={21} />
+              </Link>
+              <Link
+                href=""
+                className="h-10 w-10 rounded-full flex justify-center items-center 
+                hover:bg-gray-50 hover:text-zinc-900 transition duration-200 cursor-pointer"
+              >
+                <RiFacebookFill size={21} />
+              </Link>
+              <Link
+                href=""
+                className="h-10 w-10 rounded-full flex justify-center items-center 
+                hover:bg-gray-50 hover:text-zinc-900 transition duration-200 cursor-pointer"
+              >
+                <RiInstagramFill size={21} />
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

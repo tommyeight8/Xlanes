@@ -56,3 +56,8 @@ input:-webkit-autofill {
     height: calc(100vh - 64px);
   }
 }
+.playwrite-dk-loopet {
+  font-family: "Playwrite DK Loopet", cursive;
+  font-weight: 400; /* adjust as needed */
+  font-style: normal;
+}

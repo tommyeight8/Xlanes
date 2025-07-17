@@ -26,7 +26,9 @@ const VIP = () => {
           </ul>
         </div>
         <div className="px-6 pb-6">
-          <span className="text-xl font-semibold text-pink-600">$275/hr</span>
+          <span className="text-2xl font-extralight text-pink-600">
+            $275/hr
+          </span>
         </div>
       </div>
 
@@ -53,13 +55,15 @@ const VIP = () => {
           </ul>
         </div>
         <div className="px-6 pb-6">
-          <span className="text-xl font-semibold text-pink-600">$350/hr</span>
+          <span className="text-2xl font-extralight text-violet-600">
+            $350/hr
+          </span>
         </div>
       </div>
 
       {/* Mulholland Room */}
       <div className="bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col justify-between">
-        <div className="bg-gradient-to-br from-purple-600 to-blue-800 p-6">
+        <div className="bg-gradient-to-br from-pink-500 to-orange-500 p-6">
           <h3 className="text-2xl font-bold text-white mb-2">
             Mulholland Room
           </h3>
@@ -82,7 +86,9 @@ const VIP = () => {
           </ul>
         </div>
         <div className="px-6 pb-6">
-          <span className="text-xl font-semibold text-pink-600">$425/hr</span>
+          <span className="text-2xl font-extralight text-orange-600">
+            $425/hr
+          </span>
         </div>
       </div>
     </div>

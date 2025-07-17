@@ -62,7 +62,10 @@ const BowlingTabs = () => {
               className="flex flex-col gap-12 items-center"
             >
               {/* Banner */}
-              <div className="flex relative h-48 md:h-64 lg:h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-tl from-violet-600 to-pink-600">
+              <div
+                className="flex relative h-48 md:h-64 lg:h-72 w-full rounded-2xl 
+              overflow-hidden bg-gradient-to-tl from-purple-700 to-pink-600"
+              >
                 <div className="absolute bottom-2 z-10 md:relative flex-1 flex items-center pl-4 lg:pl-10">
                   <div className="text-left max-w-xl lg:max-w-md">
                     <p className="font-light text-gray-50 text-lg lg:text-3xl uppercase">

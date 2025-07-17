@@ -86,7 +86,7 @@ const FoodMenu = () => {
                 key={item.name}
                 className="p-4 bg-gray-800/20 rounded-xl border border-gray-800"
               >
-                <h3 className="text-green-400 font-bold mb-2">{item.name}</h3>
+                <h3 className="text-green-500 font-bold mb-2">{item.name}</h3>
                 <p className="text-gray-200 text-sm">{item.description}</p>
               </div>
             ))}
@@ -101,11 +101,11 @@ const FoodMenu = () => {
                 key={item.name}
                 className="p-4 bg-gray-800/20 rounded-xl border border-gray-800"
               >
-                <h3 className="text-red-400 font-bold mb-2">{item.name}</h3>
+                <h3 className="text-red-500 font-bold mb-2">{item.name}</h3>
                 <p className="text-gray-200 text-sm">
                   {item.name.toLowerCase().includes("build your own") ? (
                     <>
-                      <span className="text-red-400 text-xs font-semibold">
+                      <span className="text-red-500 text-xs font-semibold">
                         {item.description}
                       </span>
                     </>
@@ -130,7 +130,7 @@ const FoodMenu = () => {
                 key={item.name}
                 className="p-4 bg-gray-800/20 rounded-xl border border-gray-800"
               >
-                <h3 className="text-blue-400 font-bold mb-2">{item.name}</h3>
+                <h3 className="text-blue-500 font-bold mb-2">{item.name}</h3>
                 <p className="text-gray-200 text-sm">
                   {item.description.split("•").map((part, index) => (
                     <span key={index}>

@@ -35,7 +35,7 @@ function AnimatedHeading({ text, active }: { text: string; active: boolean }) {
     <motion.div
       initial={{ x: 200, opacity: 0 }} // start farther off-screen
       animate={controls}
-      className="absolute top-[75%] right-0 z-10 p-4 bg-gradient-to-r from-violet-700/70 to-pink-700/70 pr-10"
+      className="absolute top-[75%] right-0 z-10 p-4 bg-gradient-to-r from-violet-700/70 to-purple-700/70 pr-10"
     >
       <h3 className="text-right text-3xl lg:text-6xl font-semibold uppercase text-gray-100 tracking-wide drop-shadow-md">
         {text}
@@ -67,7 +67,7 @@ export default function FullscreenSwiper() {
               active={activeIndex === 0}
             />
             <Image
-              src="/images/XlanesBowlingMain.png"
+              src="/images/bowlingMain-2.webp"
               alt="Bowling"
               fill
               className="w-full h-full object-cover"
@@ -82,7 +82,7 @@ export default function FullscreenSwiper() {
               active={activeIndex === 1}
             />
             <Image
-              src="/images/KaraokeMain.png"
+              src="/images/KaraokeMain-3.webp"
               alt="Karaoke"
               fill
               className="w-full h-full object-cover"
@@ -112,7 +112,7 @@ export default function FullscreenSwiper() {
               active={activeIndex === 3}
             />
             <Image
-              src="/images/BarMain.png"
+              src="/images/barMain-2.webp"
               alt="Sports Bar"
               fill
               className="w-full h-full object-cover"

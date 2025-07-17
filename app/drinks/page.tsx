@@ -16,15 +16,17 @@ const page = () => {
           >
             <div className="text-left max-w-xl lg:max-w-md">
               <p className="font-light text-gray-50 text-md md:text-xl lg:text-3xl uppercase">
-                For All Foodie
+                Game On!
               </p>
               <h3 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-gray-50 uppercase">
-                Full Restaurant
+                Full Sports Bar
               </h3>
               <p className="mt-4 text-gray-200 text-sm lg:text-md pr-2 hidden md:flex">
-                Whether you’re looking for a quick bite or a delightful dining
-                experience, we have something for everyone. Enjoy our delicious
-                food while you hit up the lanes.
+                Our spacious bar area is separate from our restaurant seating.
+                Catch all your beloved sports action in elegance with our
+                cutting-edge audio setup, dynamic LED illumination, and
+                large-screen projectors. Every match resonates with the thrill
+                of sound.
               </p>
             </div>
           </div>
