@@ -6,12 +6,12 @@ const page = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/images/about-bg.webp')",
+        backgroundImage: "url('/images/about-bg-2.webp')",
       }}
       className="min-h-screen w-full flex justify-center items-center py-12 px-4 pb-16
       bg-fixed bg-no-repeat bg-cover bg-center bg-gradient-to-br from-violet-600 to-pink-600"
     >
-      <div className="max-w-[900px] w-full rounded-2xl bg-white/10 backdrop-blur-md shadow-lg px-8 pt-0 pb-8 border border-white/20">
+      <div className="relative max-w-[900px] w-full rounded-2xl backdrop-blur-lg bg-black/60 shadow-[0_0_30px_4px_rgba(59,130,246,0.7)] px-8 pt-0 pb-8 border border-[#3B82F6]">
         <About />
       </div>
     </div>

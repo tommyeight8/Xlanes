@@ -45,12 +45,10 @@ const Navbar = () => {
                   "BILLIARDS",
                   "EAT",
                   "PLAY",
-                ].map((word, index, array) => (
+                ].map((word, index) => (
                   <span key={index} className="flex items-center">
                     {word}
-                    {index < array.length - 1 && (
-                      <span className="mx-4 h-2 w-2 rounded-full bg-zinc-800" />
-                    )}
+                    <span className="mx-4 h-2 w-2 rounded-full bg-zinc-800" />
                   </span>
                 ))}
               </h3>
