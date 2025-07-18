@@ -15,6 +15,7 @@ const neonderthaw = Neonderthaw({
 
 const audioWide = Audiowide({
   weight: "400",
+  subsets: ["latin"], // ✅ required
 });
 
 type NeonSignProps = {
