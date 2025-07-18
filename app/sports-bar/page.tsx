@@ -6,12 +6,12 @@ const page = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/images/sportBar-bg.webp')",
+        backgroundImage: "url('/images/bar-bg.webp')",
       }}
       className="min-h-screen w-full flex justify-center items-center py-12 px-4 pb-16
-      bg-fixed bg-no-repeat bg-cover bg-center bg-gradient-to-br from-violet-600 to-pink-600"
+  bg-fixed bg-no-repeat bg-cover bg-center bg-gradient-to-br from-violet-600 to-pink-600"
     >
-      <div className="max-w-[900px] w-full rounded-2xl bg-white/20 backdrop-blur-lg shadow-lg px-8 pt-0 pb-8 border border-white/20">
+      <div className="max-w-[900px] w-full backdrop-blur-lg rounded-2xl bg-black/60 shadow-[0_0_30px_4px_rgba(20,184,166,0.7)] px-8 pt-0 pb-8 border-2 border-teal-400">
         <About />
       </div>
     </div>
@@ -30,7 +30,7 @@ const About = () => {
           src="/images/barMain-2.webp"
           alt="about us banner"
           fill
-          className="objectt-cover objectt-top"
+          className="object-cover object-center"
         />
       </div>
 
@@ -144,8 +144,8 @@ const About = () => {
           bar near me provides an exceptional mix of gaming, dining, and
           entertainment?” Here’s why XLanes LA stands out:
         </p>
-        <div className="flex gap-4">
-          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden w-1/3 relative bg-amber-200">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden h-64 w-full md:h-auto md:w-1/3 relative bg-amber-200">
             <Image
               src="/images/sports-0.jpg"
               alt="sports 1"
@@ -153,7 +153,7 @@ const About = () => {
               className="object-cover w-full"
             />
           </div>
-          <p className="flex flex-col w-2/3">
+          <p className="flex flex-col w-full md:w-2/3">
             <span className="font-semibold text-lg mb-2">Prime Location</span>
             <span>
               Downtown LA’s Sports Bar Gem: Situated perfectly in the pulse of
@@ -167,8 +167,8 @@ const About = () => {
             </span>
           </p>
         </div>
-        <div className="flex gap-4">
-          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden w-1/3 relative bg-amber-200">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden h-64 w-full md:h-auto md:w-1/3 relative bg-amber-200">
             <Image
               src="/images/sports-3.jpg"
               alt="sports 1"
@@ -176,7 +176,7 @@ const About = () => {
               className="object-cover w-full"
             />
           </div>
-          <p className="flex flex-col w-2/3">
+          <p className="flex flex-col w-full md:w-2/3">
             <span className="font-semibold text-lg mb-2">
               Cutting-Edge Setup
             </span>
@@ -192,8 +192,8 @@ const About = () => {
             </span>
           </p>
         </div>
-        <div className="flex gap-4">
-          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden w-1/3 relative bg-amber-200">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden h-64 w-full md:h-auto md:w-1/3 relative bg-amber-200">
             <Image
               src="/images/sports-2.jpg"
               alt="sports 1"
@@ -201,7 +201,7 @@ const About = () => {
               className="object-cover w-full"
             />
           </div>
-          <p className="flex flex-col">
+          <p className="flex flex-col w-full md:w-2/3">
             <span className="font-semibold text-lg mb-2">Expert Team</span>
             <span>
               At Your Service, Always: A place is only as good as its people,
@@ -217,8 +217,8 @@ const About = () => {
             </span>
           </p>
         </div>
-        <div className="flex gap-4">
-          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden w-1/3 relative bg-amber-200">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="border-3 border-white block rounded-2xl shrink-0 overflow-hidden h-64 w-full md:h-auto md:w-1/3 relative bg-amber-200">
             <Image
               src="/images/sports-1.jpg"
               alt="sports 1"
@@ -226,7 +226,7 @@ const About = () => {
               className="object-cover w-full"
             />
           </div>
-          <p className="flex flex-col">
+          <p className="flex flex-col w-full md:w-2/3">
             <span className="font-semibold text-lg mb-2">
               Versatile Experience
             </span>
@@ -254,6 +254,15 @@ const About = () => {
             </span>
           </p>
         </div>
+
+        <a
+          href="https://alleytrak.com/app/client/4425"
+          target="_blank"
+          className="text-lg bg-pink-600 hover:bg-pink-700 transition duration-200 
+              text-white px-6 py-2 rounded-4xl w-fit m-auto mt-8"
+        >
+          Boook Your Party Now!
+        </a>
       </div>
     </>
   );

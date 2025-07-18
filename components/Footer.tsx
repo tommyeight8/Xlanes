@@ -117,9 +117,11 @@ const Footer = () => {
                   Sports Bar
                 </li>
               </Link>
-              <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
-                Bowling
-              </li>
+              <Link href="/bowling">
+                <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
+                  Bowling
+                </li>
+              </Link>
               <li className="text-gray-300 hover:text-gray-50 transition duration-200 cursor-pointer">
                 Blogs
               </li>

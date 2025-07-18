@@ -60,7 +60,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-white z-50"
+          className="lg:hidden text-white z-50 hover:text-gray-200 transition duration-200 cursor-pointer"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           <Menu size={32} />
@@ -99,7 +99,7 @@ const Navbar = () => {
             ["Food", "/food"],
             ["Drinks", "/drinks"],
             ["Book an Event", "/events"],
-            ["Contact Us", "/#contact"],
+            ["Contact Us", "/contact"],
           ].map(([label, href], i) => (
             <li key={i}>
               <Link

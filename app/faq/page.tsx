@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/images/faq-bg.png')",
+        backgroundImage: "url('/images/faq-bg-3.webp')",
       }}
       className="min-h-screen w-full flex justify-center items-center py-12 px-4 pb-16
       bg-fixed bg-no-repeat bg-cover bg-center bg-gradient-to-br from-violet-600 to-pink-600"
