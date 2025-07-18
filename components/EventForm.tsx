@@ -239,9 +239,8 @@ export default function EventForm() {
             control={control}
             render={({ field }) => (
               <DatePicker
-                {...field}
                 selected={field.value}
-                onChange={field.onChange}
+                onChange={(date) => field.onChange(date)}
                 dateFormat="MM/dd/yyyy"
                 className="w-full bg-zinc-900 border border-gray-600 rounded px-3 py-2 text-white"
                 placeholderText="Select a date"
@@ -256,20 +255,15 @@ export default function EventForm() {
         <div>
           <label className="mb-1 block text-sm font-medium">Start Time</label>
           <Controller
-            name="startTime"
+            name="eventDate"
             control={control}
             render={({ field }) => (
               <DatePicker
-                {...field}
                 selected={field.value}
-                onChange={field.onChange}
-                showTimeSelect
-                showTimeSelectOnly
-                timeIntervals={15}
-                timeCaption="Time"
-                dateFormat="h:mm aa"
+                onChange={(date) => field.onChange(date)}
+                dateFormat="MM/dd/yyyy"
                 className="w-full bg-zinc-900 border border-gray-600 rounded px-3 py-2 text-white"
-                placeholderText="Select start time"
+                placeholderText="Select a date"
               />
             )}
           />
@@ -282,24 +276,18 @@ export default function EventForm() {
         <div>
           <label className="mb-1 block text-sm font-medium">End Time</label>
           <Controller
-            name="endTime" // ✅ should be endTime, not startTime again
+            name="eventDate"
             control={control}
             render={({ field }) => (
               <DatePicker
-                {...field}
                 selected={field.value}
-                onChange={field.onChange}
-                showTimeSelect
-                showTimeSelectOnly
-                timeIntervals={15}
-                timeCaption="Time"
-                dateFormat="h:mm aa"
+                onChange={(date) => field.onChange(date)}
+                dateFormat="MM/dd/yyyy"
                 className="w-full bg-zinc-900 border border-gray-600 rounded px-3 py-2 text-white"
-                placeholderText="Select end time"
+                placeholderText="Select a date"
               />
             )}
           />
-
           {errors.endTime && (
             <p className="text-sm text-rose-500">{errors.endTime.message}</p>
           )}
