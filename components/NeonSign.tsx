@@ -57,18 +57,16 @@ export default function NeonSign({ text }: NeonSignProps) {
 
       <div className="absolute flex justify-center items-center w-full h-28 m-auto">
         <div
-          className={`w-[30%] h-10 md:h-12 rounded-full blur-2xl transition-all duration-700 ${
-            isVisible
-              ? "glow-fade-in bg-gradient-to-l from-[#ff00ff] to-[#ff00ff]"
-              : "opacity-0"
+          className={`w-[30%] h-10 md:h-12 rounded-full blur-3xl transition-all duration-700 ${
+            isVisible ? "glow-fade-in bg-[#ff00ff]" : "opacity-0"
           }`}
         />
       </div>
 
       <style jsx>{`
         .neon-glow {
-          text-shadow: 1px 1px 0 #f481bf, 3px 3px 0 #ff00ff, 0 0 6px #f75a8e,
-            0 0 40px #ff00ff, 0 0 32px #ff00ff;
+          text-shadow: 1px 1px 0 #f481bf, 3px 3px 0 #ff00ff, 0 0 5px #f75a8e,
+            0 0 40px #ff00ff, 0 0 56px #ff00ff;
         }
 
         .glow-fade-in {
