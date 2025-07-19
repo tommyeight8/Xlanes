@@ -82,7 +82,7 @@ export default function FullscreenSwiper() {
               active={activeIndex === 1}
             />
             <Image
-              src="/images/KaraokeMain-3.webp"
+              src="/images/karaokeMain-3.webp"
               alt="Karaoke"
               fill
               className="w-full h-full object-cover"
